@@ -13,6 +13,11 @@
   --green: #9bcdb4;
   --radius: 18px;
   --font: "Manrope Variable", "Segoe UI", sans-serif;
+  --font-caption: 0.75rem;
+  --font-small: 0.875rem;
+  --font-label: 0.9375rem;
+  --font-body: 1rem;
+  --font-section: 1.125rem;
   color-scheme: dark;
 }
 * {
@@ -26,7 +31,8 @@ body {
   margin: 0;
   color: var(--text);
   font-family: var(--font);
-  font-size: 13px;
+  font-weight: 450;
+  font-size: var(--font-body);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -87,7 +93,7 @@ strong {
   font-weight: 650;
 }
 small {
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 input,
 select,
@@ -160,7 +166,7 @@ select[multiple] {
   color: var(--muted);
 }
 .small-text {
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .money {
   font-variant-numeric: tabular-nums;
@@ -179,7 +185,7 @@ select[multiple] {
 }
 .required-mark {
   color: var(--peach);
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .full-width {
   width: 100%;
@@ -194,7 +200,7 @@ select[multiple] {
   border-radius: 999px;
   min-height: 43px;
   padding: 10px 19px;
-  font-size: 12px;
+  font-size: var(--font-body);
   line-height: 1.5;
   font-weight: 650;
   white-space: nowrap;
@@ -234,7 +240,7 @@ select[multiple] {
 .button.small {
   min-height: 34px;
   padding: 7px 13px;
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .text-button {
   display: inline-flex;
@@ -243,7 +249,7 @@ select[multiple] {
   justify-content: center;
   border: 0;
   background: transparent;
-  font-size: 11px;
+  font-size: var(--font-label);
   color: var(--soft);
   font-weight: 650;
   padding: 5px 0;
@@ -281,7 +287,7 @@ select[multiple] {
   display: flex;
 }
 .sidebar {
-  width: 235px;
+  width: 255px;
   position: fixed;
   left: 0;
   top: 0;
@@ -338,12 +344,12 @@ select[multiple] {
 }
 .workspace-switch strong {
   display: block;
-  font-size: 10px;
+  font-size: var(--font-small);
   letter-spacing: -0.1px;
 }
 .workspace-switch small {
   display: block;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: var(--muted);
   margin-top: 1px;
 }
@@ -351,7 +357,7 @@ select[multiple] {
   color: var(--muted);
 }
 .nav-label {
-  font-size: 8px;
+  font-size: var(--font-caption);
   letter-spacing: 1.6px;
   color: #71829b;
   font-weight: 750;
@@ -369,7 +375,7 @@ select[multiple] {
   color: #aab6ca;
   border: 1px solid transparent;
   border-radius: 10px;
-  font-size: 11px;
+  font-size: var(--font-label);
   font-weight: 550;
   margin-bottom: 4px;
   transition:
@@ -393,7 +399,7 @@ select[multiple] {
   opacity: 1;
 }
 .nav-new {
-  font-size: 7px;
+  font-size: var(--font-caption);
   font-weight: 800;
   letter-spacing: 0.6px;
   margin-left: auto;
@@ -412,13 +418,13 @@ select[multiple] {
   align-items: flex-start;
   gap: 7px;
   padding: 12px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #bec8d7;
   margin-bottom: 12px;
 }
 .demo-note small {
   display: block;
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #7f90a8;
   margin-top: 4px;
 }
@@ -449,7 +455,7 @@ select[multiple] {
   color: #3d3c43;
   display: grid;
   place-items: center;
-  font-size: 10px;
+  font-size: var(--font-small);
   font-weight: 750;
   flex-shrink: 0;
 }
@@ -458,19 +464,19 @@ select[multiple] {
   min-width: 0;
 }
 .user-block strong {
-  font-size: 10px;
+  font-size: var(--font-small);
   display: block;
 }
 .user-block small {
   display: block;
   color: var(--muted);
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .user-block .icon-button {
   width: 25px;
 }
 .main-shell {
-  margin-left: 235px;
+  margin-left: 255px;
   flex: 1;
   min-width: 0;
   display: flex;
@@ -491,7 +497,7 @@ select[multiple] {
   display: flex;
   align-items: center;
   gap: 15px;
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #7789a3;
 }
 .breadcrumb strong {
@@ -510,7 +516,7 @@ select[multiple] {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #8a9bb4;
 }
 .topbar-divider {
@@ -522,13 +528,13 @@ select[multiple] {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 10px;
+  font-size: var(--font-small);
   color: var(--soft);
 }
 .small-avatar {
   height: 29px;
   width: 29px;
-  font-size: 10px;
+  font-size: var(--font-small);
   background: #26364c;
   color: #cfdae9;
   border: 1px solid var(--border-strong);
@@ -555,7 +561,7 @@ main#main-content {
   margin-bottom: 25px;
 }
 .eyebrow {
-  font-size: 8px;
+  font-size: var(--font-caption);
   letter-spacing: 1.7px;
   font-weight: 750;
   color: #8e9fb7;
@@ -568,7 +574,7 @@ main#main-content {
   letter-spacing: -1.2px;
 }
 .page-description {
-  font-size: 11px;
+  font-size: var(--font-label);
   color: var(--muted);
   margin-top: 9px;
 }
@@ -593,7 +599,7 @@ main#main-content {
 }
 .date-filter select {
   width: auto;
-  font-size: 10px;
+  font-size: var(--font-small);
   padding: 9px 16px 9px 0;
   background: transparent;
   border: none;
@@ -606,7 +612,7 @@ main#main-content {
 .compact-select {
   width: auto;
   max-width: 220px;
-  font-size: 10px;
+  font-size: var(--font-small);
   padding: 9px 11px;
   min-height: 36px;
   border-color: var(--border);
@@ -619,7 +625,7 @@ main#main-content {
   margin: -6px 0 21px;
 }
 .dashboard-filters > span {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #7789a3;
   margin-right: 4px;
 }
@@ -628,10 +634,10 @@ main#main-content {
   background: transparent;
   border-color: #ffffff0c;
   min-height: 30px;
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .dashboard-filters .text-button {
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .collection-hero {
   position: relative;
@@ -669,7 +675,7 @@ main#main-content {
   z-index: 1;
 }
 .hero-eyebrow {
-  font-size: 9px;
+  font-size: var(--font-caption);
   letter-spacing: 1.5px;
   font-weight: 800;
   display: flex;
@@ -678,7 +684,7 @@ main#main-content {
   color: #303b4e;
 }
 .hero-live {
-  font-size: 7px;
+  font-size: var(--font-caption);
   letter-spacing: 1px;
   display: inline-flex;
   gap: 5px;
@@ -704,7 +710,7 @@ main#main-content {
 }
 .hero-copy > p {
   color: #445064;
-  font-size: 11px;
+  font-size: var(--font-label);
   font-weight: 500;
 }
 .hero-actions {
@@ -719,7 +725,7 @@ main#main-content {
   box-shadow: 0 3px 4px #6a616310;
   border-color: #ffffff55;
   padding: 10px 22px;
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .hero-button:hover {
   background: #fff;
@@ -728,7 +734,7 @@ main#main-content {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #334054;
   font-weight: 700;
 }
@@ -767,13 +773,13 @@ main#main-content {
   letter-spacing: -1px;
 }
 .hero-aside-label {
-  font-size: 10px;
+  font-size: var(--font-small);
   margin-top: 3px;
   font-weight: 600;
   color: #414b5c;
 }
 .hero-aside-foot {
-  font-size: 8px;
+  font-size: var(--font-caption);
   margin-top: 16px;
   display: flex;
   gap: 5px;
@@ -810,7 +816,7 @@ main#main-content {
   justify-content: space-between;
   gap: 10px;
   color: #aab6c8;
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .metric-label svg {
   color: #8497b2;
@@ -826,7 +832,7 @@ main#main-content {
   font-variant-numeric: tabular-nums;
 }
 .metric > small {
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #8394ad;
   display: flex;
   align-items: center;
@@ -855,17 +861,17 @@ main#main-content {
   padding: 22px 24px 18px;
 }
 .panel-heading h2 {
-  font-size: 14px;
+  font-size: var(--font-section);
   font-weight: 650;
   letter-spacing: -0.3px;
 }
 .panel-heading p {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #899ab3;
   margin-top: 5px;
 }
 .panel-heading .text-button {
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .dashboard-grid {
   display: grid;
@@ -877,7 +883,7 @@ main#main-content {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #99abc2;
   white-space: nowrap;
 }
@@ -898,7 +904,7 @@ main#main-content {
   flex-direction: column;
   justify-content: space-between;
   color: #6f829e;
-  font-size: 7px;
+  font-size: var(--font-caption);
   padding: 3px 0 26px;
   min-width: 51px;
   align-items: flex-end;
@@ -916,7 +922,7 @@ main#main-content {
 .chart-x {
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #8397b2;
   margin-top: 4px;
   padding: 0 4px;
@@ -926,7 +932,7 @@ main#main-content {
   align-items: center;
   gap: 7px;
   color: #7f92ad;
-  font-size: 8px;
+  font-size: var(--font-caption);
   border-top: 1px solid var(--border);
   margin-top: 9px;
   padding: 11px 24px;
@@ -963,12 +969,12 @@ main#main-content {
   flex: 1;
 }
 .attention-list > a > div > strong {
-  font-size: 10px;
+  font-size: var(--font-small);
   font-weight: 650;
   display: block;
 }
 .attention-list > a > div > small {
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #8396b0;
   display: block;
   margin-top: 3px;
@@ -1005,7 +1011,7 @@ main#main-content {
   display: flex;
   gap: 6px;
   align-items: center;
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #6d809c;
   margin-top: 18px;
 }
@@ -1024,7 +1030,7 @@ main#main-content {
   padding: 7px 38px 21px;
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #4e6380;
   gap: 15px;
 }
@@ -1036,14 +1042,14 @@ main#main-content {
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: 10px;
+  font-size: var(--font-small);
   white-space: nowrap;
 }
 th {
   font-weight: 500;
   color: #8193ad;
   text-align: left;
-  font-size: 8px;
+  font-size: var(--font-caption);
   letter-spacing: 0.2px;
   padding: 12px 20px;
   border-top: 1px solid var(--border);
@@ -1077,7 +1083,7 @@ td strong {
 }
 td small {
   display: block;
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: var(--muted);
   margin-top: 4px;
 }
@@ -1089,7 +1095,7 @@ td small {
   align-items: center;
   gap: 10px;
   padding: 0;
-  font-size: 10px;
+  font-size: var(--font-small);
   font-weight: 550;
   color: #d3dfed;
   background: transparent;
@@ -1114,7 +1120,7 @@ td small {
   gap: 5px;
   padding: 4px 8px;
   border-radius: 5px;
-  font-size: 7px;
+  font-size: var(--font-caption);
   line-height: 1.5;
   font-weight: 650;
   white-space: nowrap;
@@ -1192,7 +1198,7 @@ td small {
   background: transparent;
   padding: 9px 13px 9px 0;
   box-shadow: none;
-  font-size: 10px;
+  font-size: var(--font-small);
   min-height: 37px;
 }
 .search-input:focus-within {
@@ -1207,7 +1213,7 @@ td small {
   align-items: center;
 }
 .record-count {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #8196b2;
   white-space: nowrap;
 }
@@ -1218,7 +1224,7 @@ td small {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #8498b3;
   padding: 15px 23px;
   border-top: 1px solid var(--border);
@@ -1247,7 +1253,7 @@ td small {
   border-radius: 12px;
   color: #9db6d1;
   background: #abc7df05;
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .page-callout > svg {
   color: #c3d4e7;
@@ -1259,7 +1265,7 @@ td small {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .empty {
   min-height: 230px;
@@ -1276,12 +1282,12 @@ td small {
   color: #9db6cd;
 }
 .empty h3 {
-  font-size: 15px;
+  font-size: var(--font-section);
   color: var(--soft);
 }
 .empty p {
   max-width: 480px;
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .empty.error {
   color: #e6b29f;
@@ -1343,7 +1349,7 @@ td small {
   color: #bed1e9;
 }
 .plan-card .eyebrow {
-  font-size: 7px;
+  font-size: var(--font-caption);
   color: #8297b3;
 }
 .plan-card h2 {
@@ -1352,7 +1358,7 @@ td small {
   font-weight: 600;
 }
 .plan-description {
-  font-size: 10px;
+  font-size: var(--font-small);
   color: var(--muted);
   min-height: 35px;
   margin-top: 8px;
@@ -1365,7 +1371,7 @@ td small {
   white-space: nowrap;
 }
 .plan-price small {
-  font-size: 10px;
+  font-size: var(--font-small);
   color: var(--muted);
   letter-spacing: 0;
   font-weight: 450;
@@ -1377,7 +1383,7 @@ td small {
   margin: 22px 0;
 }
 .plan-base {
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #becde0;
 }
 .plan-features {
@@ -1392,7 +1398,7 @@ td small {
   gap: 9px;
   align-items: center;
   color: #b0bfd2;
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .plan-features svg {
   color: #88a99f;
@@ -1455,7 +1461,7 @@ td small {
   letter-spacing: -0.7px;
 }
 .modal-header p {
-  font-size: 10px;
+  font-size: var(--font-small);
   margin-top: 5px;
   color: var(--muted);
 }
@@ -1474,7 +1480,7 @@ td small {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-size: 10px;
+  font-size: var(--font-small);
   font-weight: 550;
   color: #c7d3e3;
 }
@@ -1484,13 +1490,13 @@ td small {
 .field small {
   font-weight: 400;
   line-height: 1.65;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #8396b1;
 }
 .field input,
 .field select,
 .field textarea {
-  font-size: 11px;
+  font-size: var(--font-body);
 }
 .toggle-field {
   flex-direction: row;
@@ -1538,6 +1544,7 @@ td small {
 }
 .modal-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   gap: 11px;
@@ -1550,7 +1557,7 @@ td small {
   border: 1px solid #e6a78c2d;
   background: #e6a78c0a;
   border-radius: 10px;
-  font-size: 11px;
+  font-size: var(--font-label);
   color: #efbaa3;
   margin-top: 18px;
   overflow-wrap: anywhere;
@@ -1560,7 +1567,7 @@ td small {
   align-items: flex-start;
   gap: 10px;
   color: #93a6bf;
-  font-size: 10px;
+  font-size: var(--font-small);
   line-height: 1.8;
   margin-top: 22px;
   padding: 14px 16px;
@@ -1586,11 +1593,11 @@ td small {
   margin-bottom: 16px;
 }
 .section-label h3 {
-  font-size: 12px;
+  font-size: var(--font-body);
   font-weight: 650;
 }
 .section-label > span {
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: var(--muted);
 }
 .line-edit-row {
@@ -1605,19 +1612,19 @@ td small {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: var(--muted);
 }
 .line-edit-row input,
 .line-edit-row select {
-  font-size: 10px;
+  font-size: var(--font-small);
   padding: 9px;
 }
 .line-edit-kind {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 8px;
+  font-size: var(--font-caption);
   letter-spacing: 0.6px;
   text-transform: uppercase;
   color: #b6a18f;
@@ -1644,7 +1651,7 @@ td small {
   display: flex;
   gap: 11px;
   align-items: center;
-  font-size: 11px;
+  font-size: var(--font-label);
   color: #dce8e3;
   animation: fade-in 0.2s;
 }
@@ -1686,14 +1693,14 @@ td small {
   margin-bottom: 23px;
 }
 .detail-topline > span:last-child {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: var(--muted);
 }
 .detail-topline .badge {
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .fixture-tag {
-  font-size: 8px !important;
+  font-size: var(--font-caption) !important;
   color: #e9bc8b !important;
   padding: 3px 7px;
   background: #dbb88d10;
@@ -1734,10 +1741,10 @@ td small {
   display: grid;
   place-items: center;
   background: #1a2638;
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .lifecycle > div > small {
-  font-size: 8px;
+  font-size: var(--font-caption);
 }
 .lifecycle .current {
   color: var(--peach);
@@ -1753,20 +1760,20 @@ td small {
   margin: 24px 0 28px;
 }
 .detail-grid dt {
-  font-size: 8px;
+  font-size: var(--font-caption);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: #7f94b0;
   margin-bottom: 6px;
 }
 .detail-grid dd {
-  font-size: 12px;
+  font-size: var(--font-body);
   color: #d4dfed;
   margin: 0;
   overflow-wrap: anywhere;
 }
 .detail-grid small {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: var(--muted);
 }
 .detail-lines {
@@ -1786,13 +1793,13 @@ td small {
   border-bottom: 0;
 }
 .detail-lines strong {
-  font-size: 11px;
+  font-size: var(--font-label);
   font-weight: 600;
 }
 .detail-lines small {
   display: block;
   color: var(--muted);
-  font-size: 9px;
+  font-size: var(--font-caption);
   margin-top: 3px;
 }
 .detail-actions {
@@ -1803,12 +1810,12 @@ td small {
   margin: 25px 0;
 }
 .detail-actions .button {
-  font-size: 10px;
+  font-size: var(--font-small);
   padding: 9px 15px;
   min-height: 39px;
 }
 .history-title {
-  font-size: 12px;
+  font-size: var(--font-body);
   margin: 27px 0 18px;
 }
 .activity-list {
@@ -1840,22 +1847,22 @@ td small {
   background: var(--border);
 }
 .activity-list strong {
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .activity-list p {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: var(--muted);
   margin-top: 3px;
 }
 .activity-list small {
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #6f86a2;
 }
 .invoice-lines {
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .invoice-lines th {
-  font-size: 8px;
+  font-size: var(--font-caption);
   padding: 11px 10px;
 }
 .invoice-lines td {
@@ -1880,7 +1887,7 @@ td small {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: var(--font-label);
   color: var(--muted);
 }
 .invoice-totals strong {
@@ -1909,7 +1916,7 @@ td small {
   color: var(--peach);
 }
 .discount-code {
-  font-size: 8px;
+  font-size: var(--font-caption);
   padding: 3px 5px;
   border-radius: 4px;
   background: #b8cdb310;
@@ -1927,7 +1934,7 @@ td small {
   background: linear-gradient(100deg, #e6b29f0a, #e6b29f02);
   padding: 15px;
   color: #d5b4a6;
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .explain-toggle > span {
   display: flex;
@@ -1935,7 +1942,7 @@ td small {
   gap: 9px;
 }
 .explain-toggle > span:last-child {
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .explanation {
   padding: 22px;
@@ -1943,17 +1950,17 @@ td small {
   border-top: 0;
   border-radius: 0 0 12px 12px;
   margin-top: -4px;
-  font-size: 11px;
+  font-size: var(--font-label);
   color: #b3c1d4;
   background: #111d2e30;
 }
 .explanation h3 {
-  font-size: 15px;
+  font-size: var(--font-section);
   color: #e3d1c8;
   margin: 3px 0 10px;
 }
 .explanation > p {
-  font-size: 10px;
+  font-size: var(--font-small);
   color: var(--muted);
   line-height: 1.8;
 }
@@ -1962,19 +1969,19 @@ td small {
   justify-content: space-between;
   gap: 15px;
   padding: 13px 0;
-  font-size: 10px;
+  font-size: var(--font-small);
   border-bottom: 1px solid var(--border);
 }
 .explanation-line small {
   display: block;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: var(--muted);
   margin-top: 4px;
 }
 .explanation .formula {
   padding: 16px 0;
   color: #dac6ba;
-  font-size: 12px;
+  font-size: var(--font-body);
 }
 .comparison {
   padding-top: 17px;
@@ -1982,18 +1989,18 @@ td small {
   margin-top: 5px;
 }
 .comparison h4 {
-  font-size: 11px;
+  font-size: var(--font-label);
   margin-bottom: 8px;
 }
 .comparison p {
-  font-size: 10px;
+  font-size: var(--font-small);
   margin-bottom: 6px;
   color: var(--muted);
 }
 .message-body,
 .evidence-json {
   font-family: "Cascadia Code", Consolas, monospace;
-  font-size: 10px;
+  font-size: var(--font-small);
   white-space: pre-wrap;
   overflow-wrap: anywhere;
   padding: 20px;
@@ -2007,7 +2014,7 @@ td small {
 }
 .message-body {
   font-family: var(--font);
-  font-size: 12px;
+  font-size: var(--font-body);
 }
 .finding-detail-title {
   font-size: 19px;
@@ -2024,7 +2031,7 @@ td small {
 }
 .settings-tabs button,
 .tabs button {
-  font-size: 10px;
+  font-size: var(--font-small);
   background: transparent;
   border: 1px solid transparent;
   border-radius: 7px;
@@ -2083,7 +2090,7 @@ td small {
   letter-spacing: -0.5px;
 }
 .integrity-banner p {
-  font-size: 10px;
+  font-size: var(--font-small);
   line-height: 1.9;
   max-width: 550px;
   color: #a3b5ce;
@@ -2102,7 +2109,7 @@ td small {
 }
 .integrity-count span {
   color: #91a6c2;
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .finding-list {
   display: grid;
@@ -2141,16 +2148,16 @@ td small {
   flex-wrap: wrap;
 }
 .finding-meta > span:not(.badge) {
-  font-size: 7px;
+  font-size: var(--font-caption);
   color: #8398b2;
   letter-spacing: 0.2px;
 }
 .finding-card h3 {
-  font-size: 12px;
+  font-size: var(--font-body);
   font-weight: 550;
 }
 .finding-card p {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #8398b4;
   margin-top: 5px;
 }
@@ -2178,7 +2185,7 @@ td small {
   font-weight: 500;
 }
 .simulation-intro p {
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #a1b2ca;
   max-width: 480px;
   margin-top: 9px;
@@ -2208,7 +2215,7 @@ td small {
   position: absolute;
   right: 22px;
   top: 20px;
-  font-size: 8px;
+  font-size: var(--font-caption);
   display: flex;
   gap: 6px;
   align-items: center;
@@ -2223,13 +2230,13 @@ td small {
 .simulation-controls > label {
   flex: 1;
   max-width: 260px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #98aac1;
   display: grid;
   gap: 7px;
 }
 .simulation-controls select {
-  font-size: 11px;
+  font-size: var(--font-label);
 }
 .simulation-controls .button {
   margin-left: auto;
@@ -2249,11 +2256,11 @@ td small {
   color: #bbccdf;
 }
 .simulation-empty p {
-  font-size: 11px;
+  font-size: var(--font-label);
   color: #8199b5;
 }
 .simulation-empty > span {
-  font-size: 9px;
+  font-size: var(--font-caption);
   margin-top: 21px;
   color: #5f7997;
 }
@@ -2262,11 +2269,11 @@ td small {
   align-items: center;
   gap: 8px;
   margin: 28px 0 18px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #9baec5;
 }
 .simulation-result-label strong {
-  font-size: 8px;
+  font-size: var(--font-caption);
   letter-spacing: 1px;
   color: #a9c6b7;
 }
@@ -2288,7 +2295,7 @@ td small {
 .simulation-stats span {
   display: block;
   color: #91a5c0;
-  font-size: 9px;
+  font-size: var(--font-caption);
 }
 .simulation-stats strong {
   display: block;
@@ -2307,7 +2314,7 @@ td small {
   grid-template-columns: 65px minmax(0, 1fr) 110px 45px;
   gap: 15px;
   align-items: center;
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #a4b7d0;
 }
 .projection-bars strong {
@@ -2316,7 +2323,7 @@ td small {
   color: #c5d5e9;
 }
 .projection-bars small {
-  font-size: 8px;
+  font-size: var(--font-caption);
 }
 .projection-track {
   height: 11px;
@@ -2337,11 +2344,11 @@ td small {
 .assumptions {
   padding: 25px;
   margin-top: 23px;
-  font-size: 10px;
+  font-size: var(--font-small);
   color: var(--muted);
 }
 .assumptions h3 {
-  font-size: 12px;
+  font-size: var(--font-body);
   color: var(--soft);
   margin-bottom: 13px;
 }
@@ -2380,7 +2387,7 @@ td small {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 8px;
+  font-size: var(--font-caption);
   letter-spacing: 1.7px;
   color: #c5c8d1;
   border: 1px solid #d8c5b72b;
@@ -2405,7 +2412,7 @@ td small {
   color: var(--peach);
 }
 .auth-story-copy > p {
-  font-size: 12px;
+  font-size: var(--font-body);
   line-height: 2;
   color: #afbacd;
 }
@@ -2437,14 +2444,14 @@ td small {
   flex: 1;
 }
 .auth-orbit-line strong {
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #e4e3e8;
   display: block;
   font-weight: 550;
 }
 .auth-orbit-line small {
   color: #9eaec5;
-  font-size: 9px;
+  font-size: var(--font-caption);
   display: block;
   margin-top: 4px;
 }
@@ -2458,7 +2465,7 @@ td small {
   margin: 5px 18px;
 }
 .auth-story-footer {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #9d9da9;
 }
 .auth-main {
@@ -2472,7 +2479,7 @@ td small {
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #6f839f;
   white-space: nowrap;
 }
@@ -2483,13 +2490,13 @@ td small {
   border-radius: 50%;
 }
 .auth-form-container {
-  max-width: 395px;
+  max-width: 440px;
   width: 100%;
   margin: auto;
   padding: 75px 0;
 }
 .auth-form-container > .eyebrow {
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #b9a291;
   margin-bottom: 14px;
 }
@@ -2500,21 +2507,21 @@ td small {
   line-height: 1.3;
 }
 .auth-description {
-  font-size: 11px;
+  font-size: var(--font-label);
   color: #8d9fba;
   line-height: 1.9;
   margin: 12px 0 32px;
 }
 .auth-form-container .field {
   margin-bottom: 20px;
-  font-size: 10px;
+  font-size: var(--font-small);
 }
 .auth-form-container .field input {
   background: #182537;
   border-color: #ffffff17;
   border-radius: 9px;
   min-height: 46px;
-  font-size: 11px;
+  font-size: var(--font-body);
   padding: 12px 15px;
 }
 .password-wrap {
@@ -2533,7 +2540,7 @@ td small {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 9px;
+  font-size: var(--font-caption);
   margin: 2px 0 26px;
 }
 .login-options > span {
@@ -2554,7 +2561,7 @@ td small {
 .auth-switch {
   margin-top: 25px;
   text-align: center;
-  font-size: 10px;
+  font-size: var(--font-small);
   color: #8398b5;
 }
 .auth-switch a {
@@ -2565,7 +2572,7 @@ td small {
   margin-left: 5px;
 }
 .password-hint {
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #8d9fba;
   margin-top: -5px;
   margin-bottom: 24px;
@@ -2577,7 +2584,7 @@ td small {
   border-top: 1px solid var(--border);
   padding-top: 25px;
   margin-top: 38px;
-  font-size: 9px;
+  font-size: var(--font-caption);
   color: #849bb6;
   line-height: 1.8;
 }
@@ -2586,11 +2593,11 @@ td small {
   color: #9eb4cc;
 }
 .auth-local-note small {
-  font-size: 8px;
+  font-size: var(--font-caption);
   color: #667e9d;
 }
 .auth-footer {
-  font-size: 8px;
+  font-size: var(--font-caption);
   text-align: center;
   color: #526d8d;
 }
@@ -2608,7 +2615,7 @@ td small {
   margin: 20px 0 10px;
 }
 .auth-success p {
-  font-size: 11px;
+  font-size: var(--font-label);
   line-height: 1.9;
   margin-bottom: 25px;
   overflow-wrap: anywhere;
@@ -2631,13 +2638,13 @@ td small {
     font-size: 29px;
   }
   .panel-heading h2 {
-    font-size: 16px;
+    font-size: var(--font-section);
   }
   .page-heading h1 {
     font-size: 35px;
   }
   .page-description {
-    font-size: 12px;
+    font-size: var(--font-body);
   }
   .chart {
     height: 227px;
@@ -2649,60 +2656,60 @@ td small {
     padding: 21px 0;
   }
   .attention-list > a > div > strong {
-    font-size: 12px;
+    font-size: var(--font-body);
   }
   .attention-list > a > div > small {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .hero-copy > p {
-    font-size: 13px;
+    font-size: var(--font-body);
   }
   .hero-eyebrow {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .hero-actions .button {
-    font-size: 12px;
+    font-size: var(--font-body);
   }
   .nav-link {
-    font-size: 12px;
+    font-size: var(--font-body);
     height: 45px;
   }
   .metric-label {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .metric > small {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .chart-caption {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   table {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   th {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .record-link {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .badge {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .sidebar {
-    width: 245px;
+    width: 265px;
   }
   .main-shell {
-    margin-left: 245px;
+    margin-left: 265px;
   }
 }
 @media (max-width: 1200px) {
   .sidebar {
-    width: 210px;
+    width: 235px;
     padding-left: 13px;
     padding-right: 13px;
   }
   .main-shell {
-    margin-left: 210px;
+    margin-left: 235px;
   }
   .page {
     padding: 30px 25px;
@@ -2735,7 +2742,7 @@ td small {
     font-size: 21px;
   }
   .metric-label {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .dashboard-grid {
     gap: 18px;
@@ -2764,7 +2771,7 @@ td small {
     padding-right: 10%;
   }
   .hero-aside-foot {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .plan-price {
     font-size: 29px;
@@ -2795,7 +2802,7 @@ td small {
     display: none;
   }
   .attention-list > a > div > small {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .attention-symbol {
     width: 28px;
@@ -2803,7 +2810,7 @@ td small {
     border-radius: 8px;
   }
   .attention-list > a > div > strong {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .collection-hero {
     gap: 10px;
@@ -2813,13 +2820,13 @@ td small {
     padding-left: 22px;
   }
   .hero-aside-label {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .hero-aside-foot {
     display: none;
   }
   .hero-copy > p {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .hero-amount {
     font-size: 40px;
@@ -2828,7 +2835,7 @@ td small {
     gap: 16px;
   }
   .hero-link {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .metric-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2844,7 +2851,7 @@ td small {
     font-size: 24px;
   }
   .metric-label {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .local-label {
     display: none;
@@ -2900,7 +2907,7 @@ td small {
     font-size: 25px;
   }
   .simulation-intro p {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .simulation-controls {
     flex-wrap: wrap;
@@ -2947,7 +2954,7 @@ td small {
     gap: 10px;
   }
   .topbar-help {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .topbar-right {
     gap: 12px;
@@ -2962,11 +2969,11 @@ td small {
     font-size: 27px;
   }
   .page-description {
-    font-size: 10px;
+    font-size: var(--font-small);
     max-width: 350px;
   }
   .eyebrow {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .dashboard-filters {
     margin-bottom: 17px;
@@ -2982,7 +2989,7 @@ td small {
     padding-left: 25px;
   }
   .hero-aside-label {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .metric-strip {
     margin-bottom: 20px;
@@ -2994,7 +3001,7 @@ td small {
   .app-footer {
     padding-left: 22px;
     padding-right: 22px;
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .auth-page {
     grid-template-columns: 1fr;
@@ -3020,7 +3027,7 @@ td small {
     font-weight: 700;
   }
   .auth-top-note {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .auth-form-container h2 {
     font-size: 31px;
@@ -3032,7 +3039,7 @@ td small {
     gap: 2px;
   }
   .settings-tabs button {
-    font-size: 9px;
+    font-size: var(--font-caption);
     padding: 8px 10px;
   }
   .finding-card {
@@ -3045,16 +3052,16 @@ td small {
     border-radius: 9px;
   }
   .finding-meta > span:not(.badge) {
-    font-size: 6px;
+    font-size: var(--font-caption);
   }
   .finding-card h3 {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .finding-card p {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .integrity-banner p {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .integrity-banner h2 {
     font-size: 20px;
@@ -3067,7 +3074,7 @@ td small {
     font-size: 30px;
   }
   .integrity-count span {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .list-toolbar {
     gap: 12px;
@@ -3091,12 +3098,12 @@ td small {
     flex-wrap: wrap;
   }
   .heading-actions .button {
-    font-size: 10px;
+    font-size: var(--font-small);
     padding: 9px 14px;
     min-height: 39px;
   }
   .page-callout {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .page-callout > a {
     display: none;
@@ -3120,7 +3127,7 @@ td small {
     gap: 17px;
   }
   .dashboard-page .page-heading {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 10px;
   }
@@ -3138,22 +3145,22 @@ td small {
     display: none;
   }
   .date-filter select {
-    font-size: 8px;
+    font-size: var(--font-caption);
     padding-right: 0;
   }
   .page-description {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .dashboard-filters {
     gap: 7px;
   }
   .dashboard-filters > span {
-    font-size: 8px;
+    font-size: var(--font-caption);
     margin: 0;
   }
   .dashboard-filters .compact-select {
     max-width: 145px;
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .collection-hero {
     min-height: 236px;
@@ -3162,7 +3169,7 @@ td small {
     border-radius: 18px;
   }
   .hero-eyebrow {
-    font-size: 8px;
+    font-size: var(--font-caption);
     letter-spacing: 1.2px;
   }
   .hero-amount {
@@ -3171,7 +3178,7 @@ td small {
     letter-spacing: -1.6px;
   }
   .hero-copy > p {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .hero-aside {
     display: none;
@@ -3179,14 +3186,15 @@ td small {
   .hero-actions {
     margin-top: 23px;
     gap: 21px;
+    flex-wrap: wrap;
   }
   .hero-actions .button {
-    font-size: 10px;
+    font-size: var(--font-small);
     min-height: 39px;
     padding: 9px 16px;
   }
   .hero-link {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .metric {
     padding: 16px;
@@ -3196,7 +3204,7 @@ td small {
     margin-top: 8px;
   }
   .metric-label {
-    font-size: 8px;
+    font-size: var(--font-caption);
     gap: 5px;
   }
   .metric-label svg {
@@ -3204,7 +3212,7 @@ td small {
     height: 15px;
   }
   .metric > small {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .metric-strip {
     border-radius: 13px;
@@ -3216,13 +3224,13 @@ td small {
     padding: 18px 18px 16px;
   }
   .panel-heading h2 {
-    font-size: 13px;
+    font-size: var(--font-body);
   }
   .panel-heading p {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .panel-heading .text-button {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .chart {
     padding-left: 8px;
@@ -3231,10 +3239,10 @@ td small {
   }
   .chart-y {
     min-width: 45px;
-    font-size: 6px;
+    font-size: var(--font-caption);
   }
   .chart-caption {
-    font-size: 7px;
+    font-size: var(--font-caption);
     padding: 11px 17px;
   }
   .attention-list {
@@ -3249,10 +3257,10 @@ td small {
     gap: 12px;
   }
   .attention-list > a > div > strong {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .attention-list > a > div > small {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .attention-list > a > svg {
     display: block;
@@ -3265,11 +3273,11 @@ td small {
     padding-bottom: 17px;
   }
   table th {
-    font-size: 8px;
+    font-size: var(--font-caption);
     padding: 10px 14px;
   }
   table td {
-    font-size: 9px;
+    font-size: var(--font-caption);
     padding: 13px 14px;
   }
   th:first-child,
@@ -3281,7 +3289,7 @@ td small {
     padding-right: 18px;
   }
   .record-link {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .record-icon {
     height: 27px;
@@ -3289,29 +3297,29 @@ td small {
     border-radius: 6px;
   }
   .badge {
-    font-size: 6px;
+    font-size: var(--font-caption);
     padding: 4px 6px;
   }
   .topbar {
     padding: 0 17px;
   }
   .topbar-right .topbar-help {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .breadcrumb {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .small-avatar {
     width: 25px;
     height: 25px;
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .app-footer {
     padding: 7px 16px 20px;
-    font-size: 6px;
+    font-size: var(--font-caption);
   }
   .dashboard-bottom-note {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .plan-grid {
     grid-template-columns: 1fr;
@@ -3347,11 +3355,11 @@ td small {
     min-width: 170px;
   }
   .toolbar-right > .compact-select {
-    font-size: 9px;
+    font-size: var(--font-caption);
     max-width: 140px;
   }
   .pagination {
-    font-size: 8px;
+    font-size: var(--font-caption);
     padding: 13px 15px;
   }
   .pagination > div {
@@ -3369,7 +3377,7 @@ td small {
     font-size: 20px;
   }
   .modal-header p {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .form-body,
   .detail-body {
@@ -3383,7 +3391,7 @@ td small {
     padding: 17px 20px;
   }
   .modal-footer .button {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .line-edit-row {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 62px;
@@ -3392,11 +3400,11 @@ td small {
     padding-bottom: 0;
   }
   .line-edit-row label {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .line-edit-row select,
   .line-edit-row input {
-    font-size: 9px;
+    font-size: var(--font-caption);
     padding: 8px;
   }
   .delete-line {
@@ -3410,33 +3418,33 @@ td small {
     align-items: flex-start;
   }
   .section-label h3 {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .section-label > span {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .detail-grid {
     gap: 20px 15px;
   }
   .detail-grid dd {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .detail-grid dt {
-    font-size: 7px;
+    font-size: var(--font-caption);
   }
   .detail-grid small {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .lifecycle > div {
     min-width: 0;
   }
   .lifecycle > div > small {
-    font-size: 6px;
+    font-size: var(--font-caption);
   }
   .lifecycle > div > span {
     width: 22px;
     height: 22px;
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .lifecycle:before {
     top: 10px;
@@ -3447,41 +3455,41 @@ td small {
     gap: 8px;
   }
   .detail-topline > span:last-child {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .detail-actions {
     gap: 8px;
   }
   .detail-actions .button {
-    font-size: 9px;
+    font-size: var(--font-caption);
     min-height: 36px;
     padding: 8px 12px;
   }
   .detail-lines strong {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .detail-lines small {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .detail-lines > div {
     padding: 12px;
     gap: 8px;
   }
   .detail-lines .money {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .explain-toggle {
     padding: 13px;
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .explain-toggle > span:last-child {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .explanation {
     padding: 18px 14px;
   }
   .explanation .formula {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .integrity-banner {
     padding: 22px;
@@ -3504,7 +3512,7 @@ td small {
     font-size: 19px;
   }
   .integrity-banner p {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .integrity-count {
     display: flex;
@@ -3533,26 +3541,26 @@ td small {
     margin-left: 45px;
     padding: 5px 12px;
     min-height: 29px;
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .finding-meta {
     gap: 6px;
   }
   .finding-card h3 {
-    font-size: 10px;
+    font-size: var(--font-small);
   }
   .finding-card p {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .finding-symbol {
     width: 34px;
     height: 37px;
   }
   .finding-meta .fixture-tag {
-    font-size: 6px !important;
+    font-size: var(--font-caption) !important;
   }
   .list-toolbar > .small-text {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .simulation-intro {
     gap: 18px;
@@ -3574,13 +3582,13 @@ td small {
     font-size: 22px;
   }
   .simulation-intro .eyebrow {
-    font-size: 6px;
+    font-size: var(--font-caption);
   }
   .simulation-intro p {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .readonly-tag {
-    font-size: 7px;
+    font-size: var(--font-caption);
     top: 15px;
     right: 18px;
   }
@@ -3595,7 +3603,7 @@ td small {
   }
   .simulation-controls .button {
     width: 100%;
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .simulation-stats {
     grid-template-columns: 1fr;
@@ -3617,10 +3625,10 @@ td small {
     font-size: 24px;
   }
   .simulation-stats span {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .simulation-result-label {
-    font-size: 8px;
+    font-size: var(--font-caption);
   }
   .projection-bars {
     padding: 10px 17px 25px;
@@ -3629,13 +3637,13 @@ td small {
   .projection-bars > div {
     grid-template-columns: 42px minmax(0, 1fr) 80px;
     gap: 10px;
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .projection-bars small {
     display: none;
   }
   .projection-bars strong {
-    font-size: 9px;
+    font-size: var(--font-caption);
   }
   .assumptions {
     padding: 22px;
@@ -3648,9 +3656,7 @@ td small {
     font-size: 22px;
   }
   .auth-top-note {
-    font-size: 7px;
-    gap: 5px;
-    margin-top: 8px;
+    visibility: hidden;
   }
   .auth-top-dot {
     width: 4px;
@@ -3663,10 +3669,10 @@ td small {
     padding: 65px 0;
   }
   .auth-description {
-    font-size: 11px;
+    font-size: var(--font-label);
   }
   .auth-form-container .field input {
-    font-size: 12px;
+    font-size: var(--font-body);
   }
   .auth-local-note {
     margin-top: 30px;
