@@ -1,0 +1,40 @@
+name: Verify Brightloop
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_USER: brightloop
+          POSTGRES_PASSWORD: ci-only-password
+          POSTGRES_DB: brightloop_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U brightloop -d brightloop_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://brightloop:ci-only-password@127.0.0.1:5432/brightloop_test
+      BETTER_AUTH_SECRET: ci-only-auth-secret-long-enough-for-isolated-tests
+      BETTER_AUTH_URL: http://localhost:3000
+      APP_BASE_URL: http://localhost:3000
+      BILLING_CRON_SECRET: ci-only-scheduler-secret
+      DEMO_PASSWORD: CiOnlyDemoPassword!A
+      ALLOW_LOCAL_DEMO: "true"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
