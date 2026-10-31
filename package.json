@@ -12,6 +12,7 @@
     "db:stop": "tsx scripts/postgres.ts stop",
     "db:migrate": "tsx scripts/migrate.ts",
     "db:seed": "tsx scripts/seed.ts",
+    "db:demo": "tsx scripts/demo-showcase.ts",
     "billing:run": "tsx scripts/billing.ts",
     "billing:watch": "tsx scripts/billing.ts --watch",
     "outbox": "tsx scripts/outbox.ts",

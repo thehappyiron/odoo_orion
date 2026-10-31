@@ -31,6 +31,8 @@ Stop the project-owned cluster with `npm run db:stop`. Close the dev terminal wi
 
 ## What works
 
+The sidebar's **How it works** page at `/how-it-works` explains the lifecycle, BillGuard, payments, simulations and local demo behavior. Run `npm run db:demo` to add a richer sample dataset to an existing local workspace. It preserves existing records, skips completed showcase subscriptions, and populates currently empty customer accounts with clearly labelled Demo plans. Setup also runs this additive command.
+
 - Email/password registration, login/logout and one-time password resets; admin, staff and customer roles checked on the server. Customers see their own subscriptions and issued invoices.
 - Products with sales/cost prices and notes, additive variants (including Odoo +560), four billing frequencies, minimum quantities, availability dates and lifecycle policy switches.
 - Reusable quotation templates and editable initial product lines. Draft → Quotation → Confirmed → Active → Closed, plus pause/resume, renewal and audited future add-on amendments.

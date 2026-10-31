@@ -60,6 +60,15 @@ test("dashboard renders database totals and core pages", async ({ page }) => {
   await expect(page.locator("h1")).toHaveText("Tax rules.");
   await page.getByRole("link", { name: "Local outbox", exact: true }).click();
   await expect(page.locator("h1")).toHaveText("Local outbox.");
+  await page.getByRole("link", { name: "How it works", exact: true }).click();
+  await expect(page.locator("h1")).toHaveText("How it works.");
+  await expect(
+    page.getByRole("heading", {
+      name: "Six steps. One source of truth.",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await page.getByRole("link", { name: "Local outbox", exact: true }).click();
   await page.getByRole("button", { name: "Discounts", exact: true }).click();
   await expect(page.locator("h1")).toHaveText("Discounts.");
   await page.getByRole("link", { name: "Local outbox", exact: true }).click();

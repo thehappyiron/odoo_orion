@@ -25,6 +25,7 @@ for (const script of [
   "scripts/postgres.ts",
   "scripts/migrate.ts",
   "scripts/seed.ts",
+  "scripts/demo-showcase.ts",
 ]) {
   const result = spawnSync(
     process.execPath,

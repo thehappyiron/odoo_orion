@@ -19,6 +19,7 @@ import {
   List,
   X,
   ArrowUpRight,
+  BookOpen,
 } from "@phosphor-icons/react";
 import type { Actor } from "@/lib/types";
 const ActorContext = createContext<Actor | null>(null);
@@ -52,6 +53,7 @@ export const titles: Record<string, string> = {
   "/simulator": "Time Machine",
   "/settings": "Settings",
   "/profile": "My profile",
+  "/how-it-works": "How it works",
 };
 export function Shell({
   actor,
@@ -139,6 +141,9 @@ export function Shell({
             ) : null}
           </nav>
           <div className="sidebar-bottom">
+            {group([
+              { href: "/how-it-works", name: "How it works", icon: BookOpen },
+            ])}
             {demo ? (
               <div className="demo-note">
                 <span className="live-dot" />

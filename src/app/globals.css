@@ -3690,6 +3690,252 @@ td small {
     transform: none !important;
   }
 }
+.guide-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  padding: 36px;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #b8c8d2, #dca890);
+  color: #243146;
+  margin-bottom: 36px;
+}
+.guide-hero .eyebrow {
+  color: #445468;
+}
+.guide-hero h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  font-weight: 600;
+  margin: 18px 0;
+}
+.guide-hero > div > p {
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 490px;
+  margin-bottom: 23px;
+}
+.guide-example {
+  background: #faf8f0d9;
+  border: 1px solid #ffffff55;
+  border-radius: 17px;
+  padding: 25px;
+}
+.guide-example h3 {
+  font-size: 23px;
+  margin-bottom: 18px;
+}
+.guide-example dl {
+  margin: 0;
+}
+.guide-example dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 9px 0;
+  font-size: 14px;
+}
+.guide-example dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-weight: 650;
+}
+.guide-example-total {
+  border-top: 1px solid #24314630;
+  margin-top: 10px;
+  padding-top: 17px !important;
+  font-size: 19px !important;
+}
+.guide-example > p {
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+  margin: 15px 0 0 !important;
+  color: #536072;
+}
+.guide-section-heading {
+  margin-bottom: 22px;
+}
+.guide-section-heading h2,
+.guide-demo h2,
+.guide-faq h2,
+.guide-customer h2 {
+  font-size: 25px;
+  letter-spacing: -0.5px;
+  font-weight: 550;
+}
+.guide-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.guide-step {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.guide-step-top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  color: #7f95b0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.guide-step-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #e6b29f10;
+  color: var(--peach);
+  border: 1px solid #e6b29f20;
+}
+.guide-step h3 {
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+.guide-step > p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.guide-step .text-button {
+  margin-top: auto;
+  font-size: 14px;
+  color: var(--peach);
+}
+.guide-demo {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  padding: 30px;
+  margin-top: 30px;
+}
+.guide-demo p,
+.guide-customer p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 15px 0;
+}
+.guide-demo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+.guide-demo li {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--soft);
+}
+.guide-demo li svg {
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.guide-customer {
+  padding: 30px;
+  margin-bottom: 25px;
+}
+.guide-faq {
+  margin-top: 38px;
+}
+.guide-faq h2 {
+  margin-bottom: 18px;
+}
+.guide-faq details {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 0;
+}
+.guide-faq summary {
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 550;
+}
+.guide-faq details p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 850px;
+  margin: 14px 0 0;
+}
+.guide-faq summary::marker {
+  color: var(--peach);
+}
+@media (max-width: 1100px) {
+  .guide-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .guide-hero {
+    gap: 25px;
+    padding: 28px;
+  }
+  .guide-hero h2 {
+    font-size: 30px;
+  }
+  .guide-demo {
+    gap: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .guide-hero,
+  .guide-demo {
+    grid-template-columns: 1fr;
+  }
+  .guide-hero {
+    padding: 25px;
+  }
+  .guide-hero h2 {
+    font-size: 31px;
+  }
+  .guide-example {
+    padding: 21px;
+  }
+  .guide-demo {
+    padding: 25px;
+  }
+  .guide-hero > div > p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .guide-steps {
+    grid-template-columns: 1fr;
+  }
+  .guide-step {
+    padding: 23px;
+  }
+  .guide-hero {
+    padding: 23px;
+    gap: 25px;
+  }
+  .guide-hero h2 {
+    font-size: 29px;
+  }
+  .guide-example dl > div {
+    font-size: 13px;
+  }
+  .guide-example-total {
+    font-size: 17px !important;
+  }
+  .guide-example {
+    padding: 18px;
+  }
+  .guide-page .page-heading .button {
+    font-size: 14px;
+  }
+}
 @media print {
   .sidebar,
   .topbar,
